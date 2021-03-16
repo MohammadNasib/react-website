@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+
+// variables
+
+$color: #6c63ff;
+
+@mixin size($fSize) {
+  font-size: $fSize;
+}
+
+body {
+  margin: 0;
+  font-family: "Mulish", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Mulish", sans-serif;
+}
+
+/* .navbar {
+  margin-bottom: 73px;
+} */
+
+.navbar-brand {
+  @include size(1.9rem !important);
+  color: $color !important;
+}
+
+.nav-link {
+  @include size(1.3rem);
+  text-transform: capitalize;
+}
+
+.activeClass {
+  font-weight: bold;
+  border-bottom: 1.5px solid $color;
+}
+
+#header {
+  height: 83vh;
+
+  & h1 {
+    font-weight: 550;
+  }
+
+  & .imgAnimated {
+    animation: up-down 2s ease-in-out infinite alternate-reverse both;
+  }
+}
+
+.brandName {
+  color: $color;
+}
+
+.button {
+  text-decoration: none;
+  color: black;
+  @include size(1rem);
+  border: 1.5px solid;
+  font-weight: bold;
+  border-radius: 9px;
+  padding: 7px 9px;
+
+  &:hover {
+    background-color: rgba(240, 236, 236, 0.363);
+    color: #6c63ff;
+    border-color: black;
+  }
+}
+
+.headerImg {
+  text-align: right;
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+.conDiv {
+  height: 58vh;
+}
+
+footer p {
+  margin-bottom: 0;
+}
